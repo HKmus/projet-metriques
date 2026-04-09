@@ -1,0 +1,1150 @@
+[
+    {
+        "prompt_version": 1,
+        "generation_number": 1,
+        "raw_text": "Administrator can create, edit, and delete teaching modules and assign one or more teachers to each module.  \nAdministrator can maintain a centralized database of all teachers and students.  \nReferring teacher can add existing teachers and students to a module they manage.  \nTeacher can record a student absence for a module and attach an optional comment.  \nTeacher can view the complete list of absences for students enrolled in any of their modules.  \nAdministrative staff can enter or update the justification reason for any recorded absence.  \nAdministrative staff can view all absences across the institution.  \nSystem can generate grouped views of absences by module and by individual student.  \nSystem provides a dashboard that highlights students with more than three unjustified absences.  \nApplication shall enforce role‑based access control for administrators, teachers, and staff.  \nAll data transmission shall be encrypted using TLS 1.3.  \nPersonal data shall be stored in compliance with GDPR regulations.  \nSystem shall respond to any user request within two seconds under normal load.  \nService shall maintain 99.5 % uptime on a monthly basis.  \nUser interface shall meet WCAG 2.1 AA accessibility standards.",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "Administrator can create, edit, and delete teaching modules and assign one or more teachers to each module."
+            },
+            {
+                "id": "R2",
+                "text": "Administrator can maintain a centralized database of all teachers and students."
+            },
+            {
+                "id": "R3",
+                "text": "Referring teacher can add existing teachers and students to a module they manage."
+            },
+            {
+                "id": "R4",
+                "text": "Teacher can record a student absence for a module and attach an optional comment."
+            },
+            {
+                "id": "R5",
+                "text": "Teacher can view the complete list of absences for students enrolled in any of their modules."
+            },
+            {
+                "id": "R6",
+                "text": "Administrative staff can enter or update the justification reason for any recorded absence."
+            },
+            {
+                "id": "R7",
+                "text": "Administrative staff can view all absences across the institution."
+            },
+            {
+                "id": "R8",
+                "text": "System can generate grouped views of absences by module and by individual student."
+            },
+            {
+                "id": "R9",
+                "text": "System provides a dashboard that highlights students with more than three unjustified absences."
+            },
+            {
+                "id": "R10",
+                "text": "Application shall enforce role‑based access control for administrators, teachers, and staff."
+            },
+            {
+                "id": "R11",
+                "text": "All data transmission shall be encrypted using TLS 1.3."
+            },
+            {
+                "id": "R12",
+                "text": "Personal data shall be stored in compliance with GDPR regulations."
+            },
+            {
+                "id": "R13",
+                "text": "System shall respond to any user request within two seconds under normal load."
+            },
+            {
+                "id": "R14",
+                "text": "Service shall maintain 99.5 % uptime on a monthly basis."
+            },
+            {
+                "id": "R15",
+                "text": "User interface shall meet WCAG 2.1 AA accessibility standards."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 1,
+        "generation_number": 2,
+        "raw_text": "Administrator can create, modify, and delete teaching modules.  \nAdministrator can associate one or more teachers with each teaching module.  \nAdministrator can maintain a global database of teachers and students.  \nReferring teacher can add existing teachers to a module.  \nReferring teacher can add existing students to a module.  \nTeacher can record a student’s absence in a module and optionally add a comment.  \nTeacher can view the list of absences for all students enrolled in a module they teach.  \nAdministrative staff can enter a justification reason for any recorded absence.  \nAdministrative staff can view all student absences across all modules.  \nSystem can group displayed absences by module.  \nSystem can group displayed absences by student.  \nSystem provides a page that alerts teaching staff to students with more than three unjustified absences.  \nSystem shall be a web‑based portal compatible with the latest versions of Chrome, Firefox, Edge, and Safari.  \nSystem shall enforce role‑based access control for administrators, teachers, and administrative staff.  \nSystem shall protect personal data in accordance with GDPR‑style regulations.  \nSystem shall process user actions and return results within two seconds under normal load.  \nSystem shall support at least 200 concurrent users without performance degradation.  \nSystem shall maintain an audit log of all create, update, and delete operations.  \nSystem shall achieve 99.5 % monthly uptime.  \nSystem shall use responsive design to be usable on desktops, tablets, and smartphones.",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "Administrator can create, modify, and delete teaching modules."
+            },
+            {
+                "id": "R2",
+                "text": "Administrator can associate one or more teachers with each teaching module."
+            },
+            {
+                "id": "R3",
+                "text": "Administrator can maintain a global database of teachers and students."
+            },
+            {
+                "id": "R4",
+                "text": "Referring teacher can add existing teachers to a module."
+            },
+            {
+                "id": "R5",
+                "text": "Referring teacher can add existing students to a module."
+            },
+            {
+                "id": "R6",
+                "text": "Teacher can record a student’s absence in a module and optionally add a comment."
+            },
+            {
+                "id": "R7",
+                "text": "Teacher can view the list of absences for all students enrolled in a module they teach."
+            },
+            {
+                "id": "R8",
+                "text": "Administrative staff can enter a justification reason for any recorded absence."
+            },
+            {
+                "id": "R9",
+                "text": "Administrative staff can view all student absences across all modules."
+            },
+            {
+                "id": "R10",
+                "text": "System can group displayed absences by module."
+            },
+            {
+                "id": "R11",
+                "text": "System can group displayed absences by student."
+            },
+            {
+                "id": "R12",
+                "text": "System provides a page that alerts teaching staff to students with more than three unjustified absences."
+            },
+            {
+                "id": "R13",
+                "text": "System shall be a web‑based portal compatible with the latest versions of Chrome, Firefox, Edge, and Safari."
+            },
+            {
+                "id": "R14",
+                "text": "System shall enforce role‑based access control for administrators, teachers, and administrative staff."
+            },
+            {
+                "id": "R15",
+                "text": "System shall protect personal data in accordance with GDPR‑style regulations."
+            },
+            {
+                "id": "R16",
+                "text": "System shall process user actions and return results within two seconds under normal load."
+            },
+            {
+                "id": "R17",
+                "text": "System shall support at least 200 concurrent users without performance degradation."
+            },
+            {
+                "id": "R18",
+                "text": "System shall maintain an audit log of all create, update, and delete operations."
+            },
+            {
+                "id": "R19",
+                "text": "System shall achieve 99.5 % monthly uptime."
+            },
+            {
+                "id": "R20",
+                "text": "System shall use responsive design to be usable on desktops, tablets, and smartphones."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 1,
+        "generation_number": 3,
+        "raw_text": "The system shall allow administrators to create, edit, and delete teaching modules.  \nThe system shall enable administrators to associate one or more teachers with each teaching module.  \nThe system shall maintain a global database of teachers and students that is managed by administrators.  \nThe system shall permit referring teachers to add existing teachers and students to a module.  \nThe system shall allow teachers to record a student absence for a specific module and include an optional comment.  \nThe system shall provide teachers with a view of all absences for students enrolled in any of their modules.  \nThe system shall enable administrative staff to enter or update the justification reason for any recorded absence.  \nThe system shall give administrative staff access to a complete list of all student absences across modules.  \nThe system shall support grouping of absence records by teaching module.  \nThe system shall support grouping of absence records by student.  \nThe system shall display an alert page listing students who have accumulated more than three unjustified absences.  \nThe system shall enforce role‑based access control to ensure users can only perform actions permitted for their role.  \nThe system shall validate all input data for completeness and correct format before saving.  \nThe system shall encrypt sensitive personal data both at rest and in transit.  \nThe system shall respond to user actions within two seconds under normal load.  \nThe system shall be available 99.5 % of each calendar month, excluding scheduled maintenance.  \nThe system shall provide a responsive web interface compatible with modern browsers on desktop and mobile devices.  \nThe system shall generate audit logs for all create, read, update, and delete operations on attendance data.  \nThe system shall back up the attendance database nightly and retain backups for at least thirty days.  \nThe system shall support concurrent usage by up to 500 simultaneous users without performance degradation.",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "The system shall allow administrators to create, edit, and delete teaching modules."
+            },
+            {
+                "id": "R2",
+                "text": "The system shall enable administrators to associate one or more teachers with each teaching module."
+            },
+            {
+                "id": "R3",
+                "text": "The system shall maintain a global database of teachers and students that is managed by administrators."
+            },
+            {
+                "id": "R4",
+                "text": "The system shall permit referring teachers to add existing teachers and students to a module."
+            },
+            {
+                "id": "R5",
+                "text": "The system shall allow teachers to record a student absence for a specific module and include an optional comment."
+            },
+            {
+                "id": "R6",
+                "text": "The system shall provide teachers with a view of all absences for students enrolled in any of their modules."
+            },
+            {
+                "id": "R7",
+                "text": "The system shall enable administrative staff to enter or update the justification reason for any recorded absence."
+            },
+            {
+                "id": "R8",
+                "text": "The system shall give administrative staff access to a complete list of all student absences across modules."
+            },
+            {
+                "id": "R9",
+                "text": "The system shall support grouping of absence records by teaching module."
+            },
+            {
+                "id": "R10",
+                "text": "The system shall support grouping of absence records by student."
+            },
+            {
+                "id": "R11",
+                "text": "The system shall display an alert page listing students who have accumulated more than three unjustified absences."
+            },
+            {
+                "id": "R12",
+                "text": "The system shall enforce role‑based access control to ensure users can only perform actions permitted for their role."
+            },
+            {
+                "id": "R13",
+                "text": "The system shall validate all input data for completeness and correct format before saving."
+            },
+            {
+                "id": "R14",
+                "text": "The system shall encrypt sensitive personal data both at rest and in transit."
+            },
+            {
+                "id": "R15",
+                "text": "The system shall respond to user actions within two seconds under normal load."
+            },
+            {
+                "id": "R16",
+                "text": "The system shall be available 99.5 % of each calendar month, excluding scheduled maintenance."
+            },
+            {
+                "id": "R17",
+                "text": "The system shall provide a responsive web interface compatible with modern browsers on desktop and mobile devices."
+            },
+            {
+                "id": "R18",
+                "text": "The system shall generate audit logs for all create, read, update, and delete operations on attendance data."
+            },
+            {
+                "id": "R19",
+                "text": "The system shall back up the attendance database nightly and retain backups for at least thirty days."
+            },
+            {
+                "id": "R20",
+                "text": "The system shall support concurrent usage by up to 500 simultaneous users without performance degradation."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 1,
+        "generation_number": 4,
+        "raw_text": "System shall allow the administrator to create, edit, and delete teaching modules.  \nSystem shall enable the administrator to associate each module with one or more referring teachers.  \nSystem shall maintain a global database of teachers and students managed by the administrator.  \nSystem shall permit a referring teacher to add existing teachers to a module.  \nSystem shall permit a referring teacher to add existing students to a module.  \nSystem shall allow teachers to record an absence for a student in a module with an optional comment.  \nSystem shall provide teachers with a view of all absences for students enrolled in their modules.  \nSystem shall enable administrative staff to enter a justification reason for any recorded absence.  \nSystem shall give administrative staff access to view all student absences across the institution.  \nSystem shall support grouping and reporting of absences by module and by student.  \nSystem shall present a page that alerts teaching staff to students with more than three unjustified absences.  \nSystem shall be accessible through standard web browsers on desktop and mobile devices.  \nSystem shall enforce role‑based access control to restrict data visibility and actions per user role.  \nSystem shall encrypt data in transit using TLS and store sensitive data encrypted at rest.  \nSystem shall respond to common user actions (e.g., record absence, view lists) within two seconds.  \nSystem shall achieve 99.5 % monthly uptime, including scheduled maintenance windows.  \nSystem shall perform daily automated backups and retain attendance records for at least five years.  \nSystem shall scale to handle at least 10 000 students, 1 000 teachers, and 5 000 concurrent users.  \nSystem shall comply with applicable data protection regulations such as GDPR.",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "System shall allow the administrator to create, edit, and delete teaching modules."
+            },
+            {
+                "id": "R2",
+                "text": "System shall enable the administrator to associate each module with one or more referring teachers."
+            },
+            {
+                "id": "R3",
+                "text": "System shall maintain a global database of teachers and students managed by the administrator."
+            },
+            {
+                "id": "R4",
+                "text": "System shall permit a referring teacher to add existing teachers to a module."
+            },
+            {
+                "id": "R5",
+                "text": "System shall permit a referring teacher to add existing students to a module."
+            },
+            {
+                "id": "R6",
+                "text": "System shall allow teachers to record an absence for a student in a module with an optional comment."
+            },
+            {
+                "id": "R7",
+                "text": "System shall provide teachers with a view of all absences for students enrolled in their modules."
+            },
+            {
+                "id": "R8",
+                "text": "System shall enable administrative staff to enter a justification reason for any recorded absence."
+            },
+            {
+                "id": "R9",
+                "text": "System shall give administrative staff access to view all student absences across the institution."
+            },
+            {
+                "id": "R10",
+                "text": "System shall support grouping and reporting of absences by module and by student."
+            },
+            {
+                "id": "R11",
+                "text": "System shall present a page that alerts teaching staff to students with more than three unjustified absences."
+            },
+            {
+                "id": "R12",
+                "text": "System shall be accessible through standard web browsers on desktop and mobile devices."
+            },
+            {
+                "id": "R13",
+                "text": "System shall enforce role‑based access control to restrict data visibility and actions per user role."
+            },
+            {
+                "id": "R14",
+                "text": "System shall encrypt data in transit using TLS and store sensitive data encrypted at rest."
+            },
+            {
+                "id": "R15",
+                "text": "System shall respond to common user actions (e.g., record absence, view lists) within two seconds."
+            },
+            {
+                "id": "R16",
+                "text": "System shall achieve 99.5 % monthly uptime, including scheduled maintenance windows."
+            },
+            {
+                "id": "R17",
+                "text": "System shall perform daily automated backups and retain attendance records for at least five years."
+            },
+            {
+                "id": "R18",
+                "text": "System shall scale to handle at least 10 000 students, 1 000 teachers, and 5 000 concurrent users."
+            },
+            {
+                "id": "R19",
+                "text": "System shall comply with applicable data protection regulations such as GDPR."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 1,
+        "generation_number": 5,
+        "raw_text": "The system shall allow administrators to create, edit, and delete teaching modules.  \nThe system shall enable administrators to associate one or more teachers with each module.  \nThe system shall maintain a global database of teachers and students that is managed by administrators.  \nThe system shall permit a referring teacher to add existing teachers to a module.  \nThe system shall permit a referring teacher to add existing students to a module.  \nThe system shall allow teachers to record a student’s absence for a specific module and optionally include a comment.  \nThe system shall provide teachers with a view of all recorded absences for students enrolled in any of their modules.  \nThe system shall enable administrative staff to enter or update the justification reason for any recorded absence.  \nThe system shall allow administrative staff to view all student absences across all modules.  \nThe system shall support grouping of absence records by module.  \nThe system shall support grouping of absence records by student.  \nThe system shall display an alert page listing students who have more than three unjustified absences.  \n\nThe system shall enforce role‑based access control for administrators, teachers, and administrative staff.  \nThe system shall require secure authentication for all users.  \nThe system shall encrypt all data in transit using TLS.  \nThe system shall respond to user actions within two seconds under normal load.  \nThe system shall be usable on modern desktop and mobile browsers without additional plugins.  \nThe system shall log all create, read, update, and delete operations for audit purposes.  \nThe system shall back up the database nightly and support restoration within 30 minutes.  ",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "The system shall allow administrators to create, edit, and delete teaching modules."
+            },
+            {
+                "id": "R2",
+                "text": "The system shall enable administrators to associate one or more teachers with each module."
+            },
+            {
+                "id": "R3",
+                "text": "The system shall maintain a global database of teachers and students that is managed by administrators."
+            },
+            {
+                "id": "R4",
+                "text": "The system shall permit a referring teacher to add existing teachers to a module."
+            },
+            {
+                "id": "R5",
+                "text": "The system shall permit a referring teacher to add existing students to a module."
+            },
+            {
+                "id": "R6",
+                "text": "The system shall allow teachers to record a student’s absence for a specific module and optionally include a comment."
+            },
+            {
+                "id": "R7",
+                "text": "The system shall provide teachers with a view of all recorded absences for students enrolled in any of their modules."
+            },
+            {
+                "id": "R8",
+                "text": "The system shall enable administrative staff to enter or update the justification reason for any recorded absence."
+            },
+            {
+                "id": "R9",
+                "text": "The system shall allow administrative staff to view all student absences across all modules."
+            },
+            {
+                "id": "R10",
+                "text": "The system shall support grouping of absence records by module."
+            },
+            {
+                "id": "R11",
+                "text": "The system shall support grouping of absence records by student."
+            },
+            {
+                "id": "R12",
+                "text": "The system shall display an alert page listing students who have more than three unjustified absences."
+            },
+            {
+                "id": "R13",
+                "text": "The system shall enforce role‑based access control for administrators, teachers, and administrative staff."
+            },
+            {
+                "id": "R14",
+                "text": "The system shall require secure authentication for all users."
+            },
+            {
+                "id": "R15",
+                "text": "The system shall encrypt all data in transit using TLS."
+            },
+            {
+                "id": "R16",
+                "text": "The system shall respond to user actions within two seconds under normal load."
+            },
+            {
+                "id": "R17",
+                "text": "The system shall be usable on modern desktop and mobile browsers without additional plugins."
+            },
+            {
+                "id": "R18",
+                "text": "The system shall log all create, read, update, and delete operations for audit purposes."
+            },
+            {
+                "id": "R19",
+                "text": "The system shall back up the database nightly and support restoration within 30 minutes."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 2,
+        "generation_number": 1,
+        "raw_text": "The system shall provide role‑based authentication allowing Administrator, Referring Teacher, Teacher, Student, and Administrative Staff to log in with unique credentials.  \nThe system shall enforce strong password policies and store passwords using salted cryptographic hashing.  \nThe system shall maintain a central repository of all users, ensuring each user has a unique email address and cannot be duplicated.  \nThe Administrator shall be able to create, edit, and delete teaching modules, specifying module code, title, schedule, and associated referring teachers.  \nThe Administrator shall be able to associate one or more referring teachers with each module and prevent circular references.  \nThe Administrator shall be able to add, modify, or remove teacher and student records in the global database, with validation that required fields (name, ID, email) are provided.  \nThe system shall prevent deletion of a teacher or student who is currently linked to active modules unless reassigned or archived.  \nThe Referring Teacher shall be able to view the list of teachers and students already present in the global database.  \nThe Referring Teacher shall be able to assign existing teachers and students to modules they manage, with validation that the user belongs to the same institution.  \nWhen a teacher records an absence, the system shall require selection of a module, the student, the date of class, and allow an optional comment limited to 500 characters.  \nThe system shall validate that the absence date falls within the module’s scheduled period and reject future dates.  \nThe system shall automatically timestamp each absence entry and record the reporting teacher’s identifier.  \nTeachers shall be able to retrieve a paginated list of absences for any of their assigned modules, filterable by date range, student, or justification status.  \nAdministrative Staff shall have read‑only access to all student absences across all modules and shall be able to add or edit the justification reason for any absence.  \nThe justification reason entered by Administrative Staff shall be mandatory for each absence and limited to a predefined list of categories plus an optional free‑text note of up to 300 characters.  \nThe system shall prevent Administrative Staff from deleting absence records; instead, they may mark an entry as “archived” with an audit trail.  \nAbsences shall be viewable grouped by module and by student, with totals displayed for each group.  \nThe system shall generate an alert page for teaching staff that lists any student with more than three unjustified absences within the current academic term.  \nThe alert page shall be refreshed automatically every 15 minutes and highlight students whose status changes in real time.  \nAll data modifications shall be logged with user ID, timestamp, and operation type for audit compliance.  \nThe application shall enforce session timeout after 30 minutes of inactivity and require re‑authentication.  \nAll communication between client browsers and the server shall be encrypted using TLS 1.3.  \nThe system shall support at least 500 concurrent users with average page response times under 2 seconds.  \nThe user interface shall be responsive and accessible, meeting WCAG 2.2 AA criteria on desktop, tablet, and mobile devices.  \nError messages shall be user‑friendly, indicating the exact field causing validation failure and suggested corrective action.  \nThe system shall provide a searchable, sortable dashboard for Administrators to monitor module creation, user assignments, and system health metrics.  \nDatabase backups shall be performed nightly with a retention period of 30 days, and recovery time objective shall not exceed 1 hour.  \nThe application shall be deployable on a cloud environment supporting horizontal scaling to handle peak loads during enrollment periods.  \nAll public APIs shall be documented with OpenAPI specifications and enforce rate limiting of 100 requests per minute per user.  \nThe system shall undergo quarterly security penetration testing and remediate identified vulnerabilities within 30 days.  \nThe platform shall support multilingual labels (English and Spanish) and allow users to switch language preferences at any time.  \nThe system shall provide a “Forgot Password” workflow that sends a time‑limited, single‑use token to the user’s registered email address.  \nAll business rules (e.g., maximum three unjustified absences trigger alert) shall be configurable by the Administrator without code changes.  ",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "The system shall provide role‑based authentication allowing Administrator, Referring Teacher, Teacher, Student, and Administrative Staff to log in with unique credentials."
+            },
+            {
+                "id": "R2",
+                "text": "The system shall enforce strong password policies and store passwords using salted cryptographic hashing."
+            },
+            {
+                "id": "R3",
+                "text": "The system shall maintain a central repository of all users, ensuring each user has a unique email address and cannot be duplicated."
+            },
+            {
+                "id": "R4",
+                "text": "The Administrator shall be able to create, edit, and delete teaching modules, specifying module code, title, schedule, and associated referring teachers."
+            },
+            {
+                "id": "R5",
+                "text": "The Administrator shall be able to associate one or more referring teachers with each module and prevent circular references."
+            },
+            {
+                "id": "R6",
+                "text": "The Administrator shall be able to add, modify, or remove teacher and student records in the global database, with validation that required fields (name, ID, email) are provided."
+            },
+            {
+                "id": "R7",
+                "text": "The system shall prevent deletion of a teacher or student who is currently linked to active modules unless reassigned or archived."
+            },
+            {
+                "id": "R8",
+                "text": "The Referring Teacher shall be able to view the list of teachers and students already present in the global database."
+            },
+            {
+                "id": "R9",
+                "text": "The Referring Teacher shall be able to assign existing teachers and students to modules they manage, with validation that the user belongs to the same institution."
+            },
+            {
+                "id": "R10",
+                "text": "When a teacher records an absence, the system shall require selection of a module, the student, the date of class, and allow an optional comment limited to 500 characters."
+            },
+            {
+                "id": "R11",
+                "text": "The system shall validate that the absence date falls within the module’s scheduled period and reject future dates."
+            },
+            {
+                "id": "R12",
+                "text": "The system shall automatically timestamp each absence entry and record the reporting teacher’s identifier."
+            },
+            {
+                "id": "R13",
+                "text": "Teachers shall be able to retrieve a paginated list of absences for any of their assigned modules, filterable by date range, student, or justification status."
+            },
+            {
+                "id": "R14",
+                "text": "Administrative Staff shall have read‑only access to all student absences across all modules and shall be able to add or edit the justification reason for any absence."
+            },
+            {
+                "id": "R15",
+                "text": "The justification reason entered by Administrative Staff shall be mandatory for each absence and limited to a predefined list of categories plus an optional free‑text note of up to 300 characters."
+            },
+            {
+                "id": "R16",
+                "text": "The system shall prevent Administrative Staff from deleting absence records; instead, they may mark an entry as “archived” with an audit trail."
+            },
+            {
+                "id": "R17",
+                "text": "Absences shall be viewable grouped by module and by student, with totals displayed for each group."
+            },
+            {
+                "id": "R18",
+                "text": "The system shall generate an alert page for teaching staff that lists any student with more than three unjustified absences within the current academic term."
+            },
+            {
+                "id": "R19",
+                "text": "The alert page shall be refreshed automatically every 15 minutes and highlight students whose status changes in real time."
+            },
+            {
+                "id": "R20",
+                "text": "All data modifications shall be logged with user ID, timestamp, and operation type for audit compliance."
+            },
+            {
+                "id": "R21",
+                "text": "The application shall enforce session timeout after 30 minutes of inactivity and require re‑authentication."
+            },
+            {
+                "id": "R22",
+                "text": "All communication between client browsers and the server shall be encrypted using TLS 1.3."
+            },
+            {
+                "id": "R23",
+                "text": "The system shall support at least 500 concurrent users with average page response times under 2 seconds."
+            },
+            {
+                "id": "R24",
+                "text": "The user interface shall be responsive and accessible, meeting WCAG 2.2 AA criteria on desktop, tablet, and mobile devices."
+            },
+            {
+                "id": "R25",
+                "text": "Error messages shall be user‑friendly, indicating the exact field causing validation failure and suggested corrective action."
+            },
+            {
+                "id": "R26",
+                "text": "The system shall provide a searchable, sortable dashboard for Administrators to monitor module creation, user assignments, and system health metrics."
+            },
+            {
+                "id": "R27",
+                "text": "Database backups shall be performed nightly with a retention period of 30 days, and recovery time objective shall not exceed 1 hour."
+            },
+            {
+                "id": "R28",
+                "text": "The application shall be deployable on a cloud environment supporting horizontal scaling to handle peak loads during enrollment periods."
+            },
+            {
+                "id": "R29",
+                "text": "All public APIs shall be documented with OpenAPI specifications and enforce rate limiting of 100 requests per minute per user."
+            },
+            {
+                "id": "R30",
+                "text": "The system shall undergo quarterly security penetration testing and remediate identified vulnerabilities within 30 days."
+            },
+            {
+                "id": "R31",
+                "text": "The platform shall support multilingual labels (English and Spanish) and allow users to switch language preferences at any time."
+            },
+            {
+                "id": "R32",
+                "text": "The system shall provide a “Forgot Password” workflow that sends a time‑limited, single‑use token to the user’s registered email address."
+            },
+            {
+                "id": "R33",
+                "text": "All business rules (e.g., maximum three unjustified absences trigger alert) shall be configurable by the Administrator without code changes."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 2,
+        "generation_number": 2,
+        "raw_text": "The system shall authenticate all users with a unique username and strong password before granting access to any functionality.  \nThe system shall enforce role‑based access control so that only administrators can create, edit, or delete teaching modules.  \nThe system shall allow administrators to associate one or more referring teachers with each teaching module.  \nThe system shall enable administrators to add, update, or remove teacher and student records in the global database.  \nThe system shall prevent the creation of duplicate teacher or student records by validating unique identifiers such as employee or student numbers.  \nThe system shall allow a referring teacher to link existing teachers and students to a module only if those users already exist in the global database.  \nThe system shall reject attempts by a referring teacher to add a non‑existent teacher or student and display an appropriate error message.  \nThe system shall enable teachers to record an absence for any student enrolled in one of their assigned modules.  \nThe system shall require teachers to select a student, a date, and optionally enter a free‑text comment when reporting an absence.  \nThe system shall validate that the reported absence date is not in the future and falls within the module’s active period.  \nThe system shall store each absence record with a status of “unjustified” until an administrative staff member provides a justification.  \nThe system shall allow teachers to view a searchable list of absences for all students in any of their modules.  \nThe system shall display absence records grouped by module and by student when requested by teachers or administrative staff.  \nThe system shall enable administrative staff to view all student absences across the entire institution.  \nThe system shall permit administrative staff to enter a justification reason for any unjustified absence.  \nThe system shall automatically update the absence status to “justified” once a reason is entered by administrative staff.  \nThe system shall flag and display a warning for any student who accumulates more than three unjustified absences within a semester.  \nThe system shall provide a dedicated dashboard page that lists all students with more than three unjustified absences for quick review by teaching staff.  \nThe system shall send an email notification to the referring teacher and the affected student when an absence is recorded.  \nThe system shall send an email notification to the student when an absence is justified by administrative staff.  \nThe system shall log all create, read, update, and delete operations on modules, users, and absence records for audit purposes.  \nThe system shall retain audit logs for a minimum of five years and protect them from tampering.  \nThe system shall encrypt all data in transit using TLS 1.3 and encrypt sensitive data at rest.  \nThe system shall enforce session timeout after fifteen minutes of inactivity to protect against unauthorized access.  \nThe system shall respond to any user request within two seconds under normal load conditions.  \nThe system shall support at least 500 concurrent users without degradation of performance.  \nThe system shall be accessible on modern browsers and comply with WCAG 2.2 AA accessibility standards.  \nThe system shall provide intuitive navigation with clearly labeled menus for each user role to reduce training time.  \nThe system shall allow administrators to export module, teacher, student, and absence data in CSV format for external reporting.  \nThe system shall validate that only CSV files adhering to the prescribed schema can be imported for bulk data updates.  \nThe system shall back up the entire database nightly and allow restoration within thirty minutes of a failure.  \nThe system shall achieve an uptime of 99.9 % measured on a monthly basis.  \nThe system shall be designed to allow future addition of new roles and modules without extensive code changes.  ",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "The system shall authenticate all users with a unique username and strong password before granting access to any functionality."
+            },
+            {
+                "id": "R2",
+                "text": "The system shall enforce role‑based access control so that only administrators can create, edit, or delete teaching modules."
+            },
+            {
+                "id": "R3",
+                "text": "The system shall allow administrators to associate one or more referring teachers with each teaching module."
+            },
+            {
+                "id": "R4",
+                "text": "The system shall enable administrators to add, update, or remove teacher and student records in the global database."
+            },
+            {
+                "id": "R5",
+                "text": "The system shall prevent the creation of duplicate teacher or student records by validating unique identifiers such as employee or student numbers."
+            },
+            {
+                "id": "R6",
+                "text": "The system shall allow a referring teacher to link existing teachers and students to a module only if those users already exist in the global database."
+            },
+            {
+                "id": "R7",
+                "text": "The system shall reject attempts by a referring teacher to add a non‑existent teacher or student and display an appropriate error message."
+            },
+            {
+                "id": "R8",
+                "text": "The system shall enable teachers to record an absence for any student enrolled in one of their assigned modules."
+            },
+            {
+                "id": "R9",
+                "text": "The system shall require teachers to select a student, a date, and optionally enter a free‑text comment when reporting an absence."
+            },
+            {
+                "id": "R10",
+                "text": "The system shall validate that the reported absence date is not in the future and falls within the module’s active period."
+            },
+            {
+                "id": "R11",
+                "text": "The system shall store each absence record with a status of “unjustified” until an administrative staff member provides a justification."
+            },
+            {
+                "id": "R12",
+                "text": "The system shall allow teachers to view a searchable list of absences for all students in any of their modules."
+            },
+            {
+                "id": "R13",
+                "text": "The system shall display absence records grouped by module and by student when requested by teachers or administrative staff."
+            },
+            {
+                "id": "R14",
+                "text": "The system shall enable administrative staff to view all student absences across the entire institution."
+            },
+            {
+                "id": "R15",
+                "text": "The system shall permit administrative staff to enter a justification reason for any unjustified absence."
+            },
+            {
+                "id": "R16",
+                "text": "The system shall automatically update the absence status to “justified” once a reason is entered by administrative staff."
+            },
+            {
+                "id": "R17",
+                "text": "The system shall flag and display a warning for any student who accumulates more than three unjustified absences within a semester."
+            },
+            {
+                "id": "R18",
+                "text": "The system shall provide a dedicated dashboard page that lists all students with more than three unjustified absences for quick review by teaching staff."
+            },
+            {
+                "id": "R19",
+                "text": "The system shall send an email notification to the referring teacher and the affected student when an absence is recorded."
+            },
+            {
+                "id": "R20",
+                "text": "The system shall send an email notification to the student when an absence is justified by administrative staff."
+            },
+            {
+                "id": "R21",
+                "text": "The system shall log all create, read, update, and delete operations on modules, users, and absence records for audit purposes."
+            },
+            {
+                "id": "R22",
+                "text": "The system shall retain audit logs for a minimum of five years and protect them from tampering."
+            },
+            {
+                "id": "R23",
+                "text": "The system shall encrypt all data in transit using TLS 1.3 and encrypt sensitive data at rest."
+            },
+            {
+                "id": "R24",
+                "text": "The system shall enforce session timeout after fifteen minutes of inactivity to protect against unauthorized access."
+            },
+            {
+                "id": "R25",
+                "text": "The system shall respond to any user request within two seconds under normal load conditions."
+            },
+            {
+                "id": "R26",
+                "text": "The system shall support at least 500 concurrent users without degradation of performance."
+            },
+            {
+                "id": "R27",
+                "text": "The system shall be accessible on modern browsers and comply with WCAG 2.2 AA accessibility standards."
+            },
+            {
+                "id": "R28",
+                "text": "The system shall provide intuitive navigation with clearly labeled menus for each user role to reduce training time."
+            },
+            {
+                "id": "R29",
+                "text": "The system shall allow administrators to export module, teacher, student, and absence data in CSV format for external reporting."
+            },
+            {
+                "id": "R30",
+                "text": "The system shall validate that only CSV files adhering to the prescribed schema can be imported for bulk data updates."
+            },
+            {
+                "id": "R31",
+                "text": "The system shall back up the entire database nightly and allow restoration within thirty minutes of a failure."
+            },
+            {
+                "id": "R32",
+                "text": "The system shall achieve an uptime of 99.9 % measured on a monthly basis."
+            },
+            {
+                "id": "R33",
+                "text": "The system shall be designed to allow future addition of new roles and modules without extensive code changes."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 2,
+        "generation_number": 3,
+        "raw_text": "Administrator can create teaching modules with unique identifiers.  \nAdministrator can edit module details and associate one or more referring teachers.  \nAdministrator can delete teaching modules only if no recorded absences exist.  \nAdministrator can add, edit, and deactivate user accounts for teachers, students, referring teachers, and administrative staff.  \nAdministrator can assign users to modules and ensure a teacher is linked to at least one module.  \nReferring teacher can view the global database of teachers and students.  \nReferring teacher can link existing teachers and students to a module they oversee.  \nReferring teacher cannot add users that are not already present in the system.  \nTeacher can record an absence for a student enrolled in one of their modules, specifying date, time, and optional comment.  \nTeacher cannot record an absence for a student not enrolled in the module or for a future date beyond the current day.  \nTeacher can view a sortable list of absences for all students in a module, filterable by date range and justification status.  \nTeacher can export the module’s absence list to CSV or PDF.  \nAdministrative staff can view all absences across all modules and students.  \nAdministrative staff can enter or modify the justification reason for any recorded absence.  \nAdministrative staff cannot justify an absence that does not exist.  \nThe system groups absences by module and by student for reporting purposes.  \nThe system generates a notification page listing students with more than three unjustified absences, visible to teachers and administrative staff.  \nStudents can log in to view their personal attendance record, including justified and unjustified absences.  \nStudents cannot see attendance data of other students.  \nStudents can submit a justification request for an unjustified absence, which is routed to administrative staff.  \nThe system validates that justification requests contain a non‑empty reason and optional supporting document.  \nAll user actions are audited with timestamp, user ID, and action type.  \nThe system sends email notifications to students when their absence status changes (e.g., after justification).  \nThe system sends email alerts to teachers when a student in their module exceeds three unjustified absences.  \nThe system prevents duplicate absence entries for the same student, module, and date.  \nThe system allows bulk import of student and teacher lists via validated CSV files.  \nThe system enforces password complexity and periodic expiration for all user accounts.  \nThe system locks a user account after five consecutive failed login attempts.  \nThe system supports role‑based access control ensuring each role can only perform permitted actions.  \nThe system logs out inactive users after 15 minutes of inactivity.  \nThe system provides a responsive UI that works on desktop and tablet browsers.  \nThe system must respond to any user request within 2 seconds under normal load.  \nThe system shall be available 99.5% of the time, excluding scheduled maintenance.  \nData at rest is encrypted using AES‑256, and data in transit uses TLS 1.3.  \nThe system shall allow backup and restore of the database without data loss.",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "Administrator can create teaching modules with unique identifiers."
+            },
+            {
+                "id": "R2",
+                "text": "Administrator can edit module details and associate one or more referring teachers."
+            },
+            {
+                "id": "R3",
+                "text": "Administrator can delete teaching modules only if no recorded absences exist."
+            },
+            {
+                "id": "R4",
+                "text": "Administrator can add, edit, and deactivate user accounts for teachers, students, referring teachers, and administrative staff."
+            },
+            {
+                "id": "R5",
+                "text": "Administrator can assign users to modules and ensure a teacher is linked to at least one module."
+            },
+            {
+                "id": "R6",
+                "text": "Referring teacher can view the global database of teachers and students."
+            },
+            {
+                "id": "R7",
+                "text": "Referring teacher can link existing teachers and students to a module they oversee."
+            },
+            {
+                "id": "R8",
+                "text": "Referring teacher cannot add users that are not already present in the system."
+            },
+            {
+                "id": "R9",
+                "text": "Teacher can record an absence for a student enrolled in one of their modules, specifying date, time, and optional comment."
+            },
+            {
+                "id": "R10",
+                "text": "Teacher cannot record an absence for a student not enrolled in the module or for a future date beyond the current day."
+            },
+            {
+                "id": "R11",
+                "text": "Teacher can view a sortable list of absences for all students in a module, filterable by date range and justification status."
+            },
+            {
+                "id": "R12",
+                "text": "Teacher can export the module’s absence list to CSV or PDF."
+            },
+            {
+                "id": "R13",
+                "text": "Administrative staff can view all absences across all modules and students."
+            },
+            {
+                "id": "R14",
+                "text": "Administrative staff can enter or modify the justification reason for any recorded absence."
+            },
+            {
+                "id": "R15",
+                "text": "Administrative staff cannot justify an absence that does not exist."
+            },
+            {
+                "id": "R16",
+                "text": "The system groups absences by module and by student for reporting purposes."
+            },
+            {
+                "id": "R17",
+                "text": "The system generates a notification page listing students with more than three unjustified absences, visible to teachers and administrative staff."
+            },
+            {
+                "id": "R18",
+                "text": "Students can log in to view their personal attendance record, including justified and unjustified absences."
+            },
+            {
+                "id": "R19",
+                "text": "Students cannot see attendance data of other students."
+            },
+            {
+                "id": "R20",
+                "text": "Students can submit a justification request for an unjustified absence, which is routed to administrative staff."
+            },
+            {
+                "id": "R21",
+                "text": "The system validates that justification requests contain a non‑empty reason and optional supporting document."
+            },
+            {
+                "id": "R22",
+                "text": "All user actions are audited with timestamp, user ID, and action type."
+            },
+            {
+                "id": "R23",
+                "text": "The system sends email notifications to students when their absence status changes (e.g., after justification)."
+            },
+            {
+                "id": "R24",
+                "text": "The system sends email alerts to teachers when a student in their module exceeds three unjustified absences."
+            },
+            {
+                "id": "R25",
+                "text": "The system prevents duplicate absence entries for the same student, module, and date."
+            },
+            {
+                "id": "R26",
+                "text": "The system allows bulk import of student and teacher lists via validated CSV files."
+            },
+            {
+                "id": "R27",
+                "text": "The system enforces password complexity and periodic expiration for all user accounts."
+            },
+            {
+                "id": "R28",
+                "text": "The system locks a user account after five consecutive failed login attempts."
+            },
+            {
+                "id": "R29",
+                "text": "The system supports role‑based access control ensuring each role can only perform permitted actions."
+            },
+            {
+                "id": "R30",
+                "text": "The system logs out inactive users after 15 minutes of inactivity."
+            },
+            {
+                "id": "R31",
+                "text": "The system provides a responsive UI that works on desktop and tablet browsers."
+            },
+            {
+                "id": "R32",
+                "text": "The system must respond to any user request within 2 seconds under normal load."
+            },
+            {
+                "id": "R33",
+                "text": "The system shall be available 99.5% of the time, excluding scheduled maintenance."
+            },
+            {
+                "id": "R34",
+                "text": "Data at rest is encrypted using AES‑256, and data in transit uses TLS 1.3."
+            },
+            {
+                "id": "R35",
+                "text": "The system shall allow backup and restore of the database without data loss."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 2,
+        "generation_number": 4,
+        "raw_text": "Administrator can create a teaching module with a unique identifier and descriptive name.  \nAdministrator can edit the details of any existing teaching module.  \nAdministrator can delete a teaching module only when no absence records are associated with it.  \nAdministrator can associate one or more referring teachers with each teaching module.  \nAdministrator can add, edit, deactivate, and permanently remove user accounts for teachers, students, referring teachers, and administrative staff.  \nAdministrator can assign teachers and students to modules, ensuring that each assigned user already exists in the global user database.  \nReferring teacher can view the complete list of teachers and students registered in the global database.  \nReferring teacher can link existing teachers and students to the modules they oversee.  \nReferring teacher cannot link a teacher or student that is not present in the global database.  \nTeacher can record an absence for a student enrolled in one of their assigned modules, providing the date, time, and an optional comment.  \nTeacher cannot record an absence for a student who is not enrolled in the module.  \nTeacher can edit or delete an absence they recorded only within a fifteen‑minute window after its creation.  \nTeacher can view a consolidated list of all recorded absences for each of their modules, with filters for student and date range.  \nAdministrative staff can view all absence records across all modules and all students.  \nAdministrative staff can add a justification reason to any recorded absence and mark it as justified or unjustified.  \nAdministrative staff cannot modify the original absence details (date, student, module) after the record has been created.  \nThe system must prevent duplicate absence entries for the same student, module, and date.  \nThe system must allow a student to view only their own absence records and the associated justification status.  \nA student cannot view the absence records of any other student.  \nThe system must generate a notification on a teacher’s dashboard whenever a student in any of their modules accumulates more than three unjustified absences.  \nEach notification must include the student’s name, the relevant module, and the current count of unjustified absences.  \nReferring teacher receives a weekly summary email listing students in their modules who have more than three unjustified absences.  \nAll users must authenticate with a unique username and a strong password before accessing any functionality.  \nPasswords must be stored using salted cryptographic hashing.  \nSession tokens must expire after thirty minutes of inactivity.  \nThe system must validate that all entered dates for absences are in the past and not future dates.  \nThe system must enforce that comments attached to an absence do not exceed five hundred characters.  \nThe system must log every create, update, or delete operation on modules, users, and absences, recording the timestamp and the performing user’s identifier.  \nThe system must retain audit logs for a minimum of two years.  \nThe user interface must load the main dashboard within two seconds under normal load conditions.  \nThe system must support at least two hundred concurrent users without performance degradation.  \nAll communications between client browsers and the server must be encrypted using HTTPS.  \nThe system must achieve an availability of ninety‑nine point five percent per month, excluding scheduled maintenance windows.  \nThe system must enforce role‑based access control so that each role can perform only the actions expressly permitted to it.",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "Administrator can create a teaching module with a unique identifier and descriptive name."
+            },
+            {
+                "id": "R2",
+                "text": "Administrator can edit the details of any existing teaching module."
+            },
+            {
+                "id": "R3",
+                "text": "Administrator can delete a teaching module only when no absence records are associated with it."
+            },
+            {
+                "id": "R4",
+                "text": "Administrator can associate one or more referring teachers with each teaching module."
+            },
+            {
+                "id": "R5",
+                "text": "Administrator can add, edit, deactivate, and permanently remove user accounts for teachers, students, referring teachers, and administrative staff."
+            },
+            {
+                "id": "R6",
+                "text": "Administrator can assign teachers and students to modules, ensuring that each assigned user already exists in the global user database."
+            },
+            {
+                "id": "R7",
+                "text": "Referring teacher can view the complete list of teachers and students registered in the global database."
+            },
+            {
+                "id": "R8",
+                "text": "Referring teacher can link existing teachers and students to the modules they oversee."
+            },
+            {
+                "id": "R9",
+                "text": "Referring teacher cannot link a teacher or student that is not present in the global database."
+            },
+            {
+                "id": "R10",
+                "text": "Teacher can record an absence for a student enrolled in one of their assigned modules, providing the date, time, and an optional comment."
+            },
+            {
+                "id": "R11",
+                "text": "Teacher cannot record an absence for a student who is not enrolled in the module."
+            },
+            {
+                "id": "R12",
+                "text": "Teacher can edit or delete an absence they recorded only within a fifteen‑minute window after its creation."
+            },
+            {
+                "id": "R13",
+                "text": "Teacher can view a consolidated list of all recorded absences for each of their modules, with filters for student and date range."
+            },
+            {
+                "id": "R14",
+                "text": "Administrative staff can view all absence records across all modules and all students."
+            },
+            {
+                "id": "R15",
+                "text": "Administrative staff can add a justification reason to any recorded absence and mark it as justified or unjustified."
+            },
+            {
+                "id": "R16",
+                "text": "Administrative staff cannot modify the original absence details (date, student, module) after the record has been created."
+            },
+            {
+                "id": "R17",
+                "text": "The system must prevent duplicate absence entries for the same student, module, and date."
+            },
+            {
+                "id": "R18",
+                "text": "The system must allow a student to view only their own absence records and the associated justification status."
+            },
+            {
+                "id": "R19",
+                "text": "A student cannot view the absence records of any other student."
+            },
+            {
+                "id": "R20",
+                "text": "The system must generate a notification on a teacher’s dashboard whenever a student in any of their modules accumulates more than three unjustified absences."
+            },
+            {
+                "id": "R21",
+                "text": "Each notification must include the student’s name, the relevant module, and the current count of unjustified absences."
+            },
+            {
+                "id": "R22",
+                "text": "Referring teacher receives a weekly summary email listing students in their modules who have more than three unjustified absences."
+            },
+            {
+                "id": "R23",
+                "text": "All users must authenticate with a unique username and a strong password before accessing any functionality."
+            },
+            {
+                "id": "R24",
+                "text": "Passwords must be stored using salted cryptographic hashing."
+            },
+            {
+                "id": "R25",
+                "text": "Session tokens must expire after thirty minutes of inactivity."
+            },
+            {
+                "id": "R26",
+                "text": "The system must validate that all entered dates for absences are in the past and not future dates."
+            },
+            {
+                "id": "R27",
+                "text": "The system must enforce that comments attached to an absence do not exceed five hundred characters."
+            },
+            {
+                "id": "R28",
+                "text": "The system must log every create, update, or delete operation on modules, users, and absences, recording the timestamp and the performing user’s identifier."
+            },
+            {
+                "id": "R29",
+                "text": "The system must retain audit logs for a minimum of two years."
+            },
+            {
+                "id": "R30",
+                "text": "The user interface must load the main dashboard within two seconds under normal load conditions."
+            },
+            {
+                "id": "R31",
+                "text": "The system must support at least two hundred concurrent users without performance degradation."
+            },
+            {
+                "id": "R32",
+                "text": "All communications between client browsers and the server must be encrypted using HTTPS."
+            },
+            {
+                "id": "R33",
+                "text": "The system must achieve an availability of ninety‑nine point five percent per month, excluding scheduled maintenance windows."
+            },
+            {
+                "id": "R34",
+                "text": "The system must enforce role‑based access control so that each role can perform only the actions expressly permitted to it."
+            }
+        ],
+        "status": "success"
+    },
+    {
+        "prompt_version": 2,
+        "generation_number": 5,
+        "raw_text": "The system shall allow an Administrator to create new teaching modules with a unique identifier and descriptive title.  \nThe system shall prevent the creation of a teaching module if a module with the same identifier already exists.  \nThe system shall enable an Administrator to edit the details of any existing teaching module, including its associated referring teachers.  \nThe system shall allow an Administrator to delete a teaching module only if no attendance records are linked to it, otherwise the system shall require archival of the module.  \nThe system shall store a global directory of all Teachers and Students, each with a unique login credential, managed by the Administrator.  \nThe system shall enforce that each Teacher and each Student has a distinct email address and identification number.  \nThe system shall allow a Referring Teacher to associate existing Teachers and Students from the global directory to the modules they oversee.  \nThe system shall validate that a Teacher or Student being added to a module exists in the global directory before association.  \nThe system shall prevent a Referring Teacher from associating the same Teacher or Student to the same module more than once.  \nThe system shall enable a Teacher to record an absence for any student enrolled in one of their assigned modules, specifying the date, time slot, and optional comment.  \nThe system shall limit the optional comment length to 500 characters and reject comments exceeding this limit.  \nThe system shall automatically timestamp each absence entry with the recording teacher’s identifier and the submission time.  \nThe system shall provide a Teacher with a read‑only view of all absences recorded for students in any of their modules, sortable by date, student name, or absence type.  \nThe system shall allow an Administrative Staff member to view, filter, and export the complete list of absences for any student across all modules.  \nThe system shall require Administrative Staff to enter a justification reason for each recorded absence, with a mandatory selection from predefined categories or a free‑text field limited to 300 characters.  \nThe system shall mark an absence as “justified” only after a justification reason has been entered and saved by Administrative Staff.  \nThe system shall enable grouping of absence records by module and by student for reporting purposes.  \nThe system shall generate an alert on the Teacher’s dashboard for any student who accumulates more than three unjustified absences within the current academic term.  \nThe system shall automatically reset the unjustified‑absence count at the start of each new term.  \nThe system shall send an email notification to the Referring Teacher when a student reaches the three‑unjustified‑absence threshold.  \nThe system shall log all create, read, update, and delete actions on modules, users, and absences for audit purposes, including the actor, timestamp, and action details.  \nThe system shall enforce role‑based access control so that only users with the appropriate role can perform each defined action.  \nThe system shall require users to authenticate with a password that meets complexity rules (minimum 8 characters, at least one uppercase letter, one number, and one special character).  \nThe system shall lock a user account after five consecutive failed login attempts and require administrator intervention to unlock.  \nThe system shall encrypt all data in transit using TLS 1.3 or higher.  \nThe system shall store passwords using a strong salted hashing algorithm such as Argon2.  \nThe system shall respond to any user request within two seconds for standard queries and within five seconds for complex report generation under normal load.  \nThe system shall support concurrent access by at least 200 active users without performance degradation.  \nThe system shall provide a responsive user interface that functions on desktop browsers and major mobile browsers with screen widths down to 320 px.  \nThe system shall present all interactive elements with accessible labels and support keyboard navigation to comply with WCAG 2.1 AA standards.  \nThe system shall display user-friendly error messages for validation failures, such as duplicate entries, missing required fields, or unauthorized actions.  \nThe system shall retain attendance records for a minimum of five academic years before archival or deletion, in accordance with institutional policy.  \nThe system shall back up the entire database nightly and retain the last seven backups for disaster recovery.  \nThe system shall achieve an availability of 99.5 % uptime measured on a monthly basis, excluding scheduled maintenance windows.  \nThe system shall provide a help‑center page with searchable FAQs and contact information for technical support.  \nThe system shall allow users to reset their password through a secure, token‑based email workflow that expires after 30 minutes.  \nThe system shall validate all user‑provided dates to ensure they are not in the future when recording an absence.  \nThe system shall prevent a Teacher from recording an absence for a student who is not enrolled in the specified module, returning an appropriate validation error.  \nThe system shall log any attempt to access restricted data and trigger an alert to the Administrator after three such attempts within a 10‑minute window.  ",
+        "requirements": [
+            {
+                "id": "R1",
+                "text": "The system shall allow an Administrator to create new teaching modules with a unique identifier and descriptive title."
+            },
+            {
+                "id": "R2",
+                "text": "The system shall prevent the creation of a teaching module if a module with the same identifier already exists."
+            },
+            {
+                "id": "R3",
+                "text": "The system shall enable an Administrator to edit the details of any existing teaching module, including its associated referring teachers."
+            },
+            {
+                "id": "R4",
+                "text": "The system shall allow an Administrator to delete a teaching module only if no attendance records are linked to it, otherwise the system shall require archival of the module."
+            },
+            {
+                "id": "R5",
+                "text": "The system shall store a global directory of all Teachers and Students, each with a unique login credential, managed by the Administrator."
+            },
+            {
+                "id": "R6",
+                "text": "The system shall enforce that each Teacher and each Student has a distinct email address and identification number."
+            },
+            {
+                "id": "R7",
+                "text": "The system shall allow a Referring Teacher to associate existing Teachers and Students from the global directory to the modules they oversee."
+            },
+            {
+                "id": "R8",
+                "text": "The system shall validate that a Teacher or Student being added to a module exists in the global directory before association."
+            },
+            {
+                "id": "R9",
+                "text": "The system shall prevent a Referring Teacher from associating the same Teacher or Student to the same module more than once."
+            },
+            {
+                "id": "R10",
+                "text": "The system shall enable a Teacher to record an absence for any student enrolled in one of their assigned modules, specifying the date, time slot, and optional comment."
+            },
+            {
+                "id": "R11",
+                "text": "The system shall limit the optional comment length to 500 characters and reject comments exceeding this limit."
+            },
+            {
+                "id": "R12",
+                "text": "The system shall automatically timestamp each absence entry with the recording teacher’s identifier and the submission time."
+            },
+            {
+                "id": "R13",
+                "text": "The system shall provide a Teacher with a read‑only view of all absences recorded for students in any of their modules, sortable by date, student name, or absence type."
+            },
+            {
+                "id": "R14",
+                "text": "The system shall allow an Administrative Staff member to view, filter, and export the complete list of absences for any student across all modules."
+            },
+            {
+                "id": "R15",
+                "text": "The system shall require Administrative Staff to enter a justification reason for each recorded absence, with a mandatory selection from predefined categories or a free‑text field limited to 300 characters."
+            },
+            {
+                "id": "R16",
+                "text": "The system shall mark an absence as “justified” only after a justification reason has been entered and saved by Administrative Staff."
+            },
+            {
+                "id": "R17",
+                "text": "The system shall enable grouping of absence records by module and by student for reporting purposes."
+            },
+            {
+                "id": "R18",
+                "text": "The system shall generate an alert on the Teacher’s dashboard for any student who accumulates more than three unjustified absences within the current academic term."
+            },
+            {
+                "id": "R19",
+                "text": "The system shall automatically reset the unjustified‑absence count at the start of each new term."
+            },
+            {
+                "id": "R20",
+                "text": "The system shall send an email notification to the Referring Teacher when a student reaches the three‑unjustified‑absence threshold."
+            },
+            {
+                "id": "R21",
+                "text": "The system shall log all create, read, update, and delete actions on modules, users, and absences for audit purposes, including the actor, timestamp, and action details."
+            },
+            {
+                "id": "R22",
+                "text": "The system shall enforce role‑based access control so that only users with the appropriate role can perform each defined action."
+            },
+            {
+                "id": "R23",
+                "text": "The system shall require users to authenticate with a password that meets complexity rules (minimum 8 characters, at least one uppercase letter, one number, and one special character)."
+            },
+            {
+                "id": "R24",
+                "text": "The system shall lock a user account after five consecutive failed login attempts and require administrator intervention to unlock."
+            },
+            {
+                "id": "R25",
+                "text": "The system shall encrypt all data in transit using TLS 1.3 or higher."
+            },
+            {
+                "id": "R26",
+                "text": "The system shall store passwords using a strong salted hashing algorithm such as Argon2."
+            },
+            {
+                "id": "R27",
+                "text": "The system shall respond to any user request within two seconds for standard queries and within five seconds for complex report generation under normal load."
+            },
+            {
+                "id": "R28",
+                "text": "The system shall support concurrent access by at least 200 active users without performance degradation."
+            },
+            {
+                "id": "R29",
+                "text": "The system shall provide a responsive user interface that functions on desktop browsers and major mobile browsers with screen widths down to 320 px."
+            },
+            {
+                "id": "R30",
+                "text": "The system shall present all interactive elements with accessible labels and support keyboard navigation to comply with WCAG 2.1 AA standards."
+            },
+            {
+                "id": "R31",
+                "text": "The system shall display user-friendly error messages for validation failures, such as duplicate entries, missing required fields, or unauthorized actions."
+            },
+            {
+                "id": "R32",
+                "text": "The system shall retain attendance records for a minimum of five academic years before archival or deletion, in accordance with institutional policy."
+            },
+            {
+                "id": "R33",
+                "text": "The system shall back up the entire database nightly and retain the last seven backups for disaster recovery."
+            },
+            {
+                "id": "R34",
+                "text": "The system shall achieve an availability of 99.5 % uptime measured on a monthly basis, excluding scheduled maintenance windows."
+            },
+            {
+                "id": "R35",
+                "text": "The system shall provide a help‑center page with searchable FAQs and contact information for technical support."
+            },
+            {
+                "id": "R36",
+                "text": "The system shall allow users to reset their password through a secure, token‑based email workflow that expires after 30 minutes."
+            },
+            {
+                "id": "R37",
+                "text": "The system shall validate all user‑provided dates to ensure they are not in the future when recording an absence."
+            },
+            {
+                "id": "R38",
+                "text": "The system shall prevent a Teacher from recording an absence for a student who is not enrolled in the specified module, returning an appropriate validation error."
+            },
+            {
+                "id": "R39",
+                "text": "The system shall log any attempt to access restricted data and trigger an alert to the Administrator after three such attempts within a 10‑minute window."
+            }
+        ],
+        "status": "success"
+    }
+]

@@ -1,0 +1,13 @@
+The www.kiestla.edu website aims to simplify the management of student attendance control during classes.
+The site is a portal linking students, teachers, and administrative staff. The site handles the entire process,
+from recording an absence to justifying it to the administration.
+
+Functionalities:
+- The administrator manages the creation, maintenance, and deletion of teaching modules and their association with one or more referring teachers.
+- Teachers and students are grouped together in a global database also managed by the administrator.
+- The referring teacher can add teachers and students if they are already registered in the database.
+- When a teacher reports an absence in a module, they can add a comment.
+- A teacher can consult the list of absences for all students enrolled in one of their modules.
+- The administrative staff enters the reason for the absence and has access to all student absences.
+- Absences can be grouped by module and by student.
+- A page alerts teaching staff to students with more than three unjustified absences.

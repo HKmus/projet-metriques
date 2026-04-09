@@ -1,0 +1,542 @@
+{
+  "summary": {
+    "correctness": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "completeness": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "edge_cases": {
+      "average": 2.27,
+      "min": 2,
+      "max": 3,
+      "distribution": {
+        "1": 0,
+        "2": 24,
+        "3": 9,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "redundancy": {
+      "average": 4.85,
+      "min": 4,
+      "max": 5,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 5,
+        "5": 28
+      }
+    },
+    "testability": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  },
+  "metrics": {
+    "correctness": [],
+    "completeness": [],
+    "edge_cases": [
+      {
+        "req_id": "R1",
+        "score": 2,
+        "reason": "No mention of invalid credentials or brute\u2011force protection.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 2,
+        "reason": "Lacks handling of privilege escalation or concurrent role changes.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 2,
+        "reason": "Does not address duplicate associations or missing module/teacher.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 2,
+        "reason": "No handling of duplicate entries or concurrent updates.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 3,
+        "reason": "Validates uniqueness but ignores race conditions and case sensitivity.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 2,
+        "reason": "No check for missing records or concurrent linking.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 2,
+        "reason": "Error handling not detailed for invalid inputs.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 2,
+        "reason": "No validation of enrollment or duplicate absence.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 2,
+        "reason": "Missing format, length, and required field checks.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 3,
+        "reason": "Validates date range but ignores time zones and boundary dates.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 2,
+        "reason": "No concurrency or default status handling.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 2,
+        "reason": "Search limits, pagination, and large data not covered.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 2,
+        "reason": "Grouping logic and empty groups not addressed.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 2,
+        "reason": "Large data handling and pagination omitted.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 2,
+        "reason": "Missing validation of justification content.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 2,
+        "reason": "Race condition on status update not considered.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 3,
+        "reason": "Semester boundary and counting logic not specified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 2,
+        "reason": "Performance and pagination for dashboard not mentioned.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 3,
+        "reason": "Email failure and rate limiting not addressed.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R20",
+        "score": 2,
+        "reason": "Email failure handling omitted.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R21",
+        "score": 2,
+        "reason": "Log size and tampering detection not covered.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R22",
+        "score": 3,
+        "reason": "Log rotation and tamper detection not detailed.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R23",
+        "score": 2,
+        "reason": "Key rotation and cipher strength not mentioned.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R24",
+        "score": 2,
+        "reason": "Session persistence and logout not discussed.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R25",
+        "score": 2,
+        "reason": "Peak load and latency spikes not considered.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R26",
+        "score": 3,
+        "reason": "Concurrency scaling and resource exhaustion not specified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R27",
+        "score": 2,
+        "reason": "Screen reader and contrast issues not addressed.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R28",
+        "score": 2,
+        "reason": "Usability testing and edge navigation not mentioned.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R29",
+        "score": 2,
+        "reason": "Large file handling and encoding not covered.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R30",
+        "score": 3,
+        "reason": "File size, malformed CSV, and encoding not validated.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R31",
+        "score": 3,
+        "reason": "Backup failure and concurrent writes not handled.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R32",
+        "score": 2,
+        "reason": "Failover and monitoring not specified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R33",
+        "score": 3,
+        "reason": "Backward compatibility and API changes not addressed.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ],
+    "redundancy": [
+      {
+        "req_id": "R1",
+        "score": 5,
+        "reason": "Unique authentication requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 5,
+        "reason": "Distinct RBAC for module CRUD.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 5,
+        "reason": "Unique teacher-module association.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 5,
+        "reason": "Unique CRUD for teacher/student records.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 5,
+        "reason": "Unique uniqueness validation.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 5,
+        "reason": "Unique linking only existing users.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 4,
+        "reason": "Overlaps with R6 on existence check.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 5,
+        "reason": "Unique absence recording.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 4,
+        "reason": "Overlaps with R8 on absence details.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 5,
+        "reason": "Unique date validation.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 5,
+        "reason": "Unique status initialization.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 5,
+        "reason": "Unique searchable absence list.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 5,
+        "reason": "Unique grouping display.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 5,
+        "reason": "Unique institution-wide view.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 5,
+        "reason": "Unique justification entry.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 4,
+        "reason": "Overlaps with R15 on justification.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 5,
+        "reason": "Unique warning flag.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 4,
+        "reason": "Overlaps with R17 on warning display.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 5,
+        "reason": "Unique email on absence record.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R20",
+        "score": 5,
+        "reason": "Unique email on justification.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R21",
+        "score": 5,
+        "reason": "Unique audit logging.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R22",
+        "score": 4,
+        "reason": "Overlaps with R21 on log retention.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R23",
+        "score": 5,
+        "reason": "Unique encryption requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R24",
+        "score": 5,
+        "reason": "Unique session timeout.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R25",
+        "score": 5,
+        "reason": "Unique response time.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R26",
+        "score": 5,
+        "reason": "Unique concurrency support.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R27",
+        "score": 5,
+        "reason": "Unique accessibility.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R28",
+        "score": 5,
+        "reason": "Unique navigation design.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R29",
+        "score": 5,
+        "reason": "Unique CSV export.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R30",
+        "score": 5,
+        "reason": "Unique CSV import validation.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R31",
+        "score": 5,
+        "reason": "Unique backup and restore.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R32",
+        "score": 5,
+        "reason": "Unique uptime target.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R33",
+        "score": 5,
+        "reason": "Unique extensibility.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ],
+    "testability": []
+  },
+  "requirements_count": 33,
+  "metrics_evaluated": 5,
+  "metadata": {
+    "prompt_version": 2,
+    "iteration": 2,
+    "num_requirements": 33
+  }
+}

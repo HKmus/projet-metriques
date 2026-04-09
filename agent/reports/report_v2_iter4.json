@@ -1,0 +1,317 @@
+{
+  "summary": {
+    "correctness": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "completeness": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "edge_cases": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "redundancy": {
+      "average": 4.12,
+      "min": 2,
+      "max": 5,
+      "distribution": {
+        "1": 0,
+        "2": 8,
+        "3": 3,
+        "4": 0,
+        "5": 23
+      }
+    },
+    "testability": {
+      "average": 0,
+      "min": 0,
+      "max": 0,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    }
+  },
+  "metrics": {
+    "correctness": [],
+    "completeness": [],
+    "edge_cases": [],
+    "redundancy": [
+      {
+        "req_id": "R1",
+        "score": 5,
+        "reason": "Unique module creation requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 5,
+        "reason": "Distinct module editing requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 5,
+        "reason": "Unique delete constraint.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 5,
+        "reason": "Unique teacher association requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 5,
+        "reason": "Unique user account management.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 5,
+        "reason": "Unique assignment of users to modules.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 5,
+        "reason": "Unique global database view.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 3,
+        "reason": "Overlaps with R6 for assigning users.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 2,
+        "reason": "Constraint on R8.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 5,
+        "reason": "Unique absence recording.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 2,
+        "reason": "Constraint on R10.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 5,
+        "reason": "Unique edit/delete window.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 5,
+        "reason": "Unique consolidated view.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 5,
+        "reason": "Unique admin view.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 5,
+        "reason": "Unique justification addition.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 2,
+        "reason": "Constraint on R15.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 5,
+        "reason": "Unique duplicate prevention.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 5,
+        "reason": "Unique student view.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 2,
+        "reason": "Constraint on R18.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R20",
+        "score": 5,
+        "reason": "Unique notification trigger.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R21",
+        "score": 2,
+        "reason": "Detail of R20.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R22",
+        "score": 3,
+        "reason": "Similar to R20 but email.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R23",
+        "score": 5,
+        "reason": "Unique authentication.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R24",
+        "score": 5,
+        "reason": "Unique password storage.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R25",
+        "score": 5,
+        "reason": "Unique session expiry.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R26",
+        "score": 2,
+        "reason": "Constraint on R10.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R27",
+        "score": 2,
+        "reason": "Constraint on R10.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R28",
+        "score": 5,
+        "reason": "Unique audit logging.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R29",
+        "score": 2,
+        "reason": "Constraint on R28.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R30",
+        "score": 5,
+        "reason": "Unique performance requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R31",
+        "score": 5,
+        "reason": "Unique concurrency requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R32",
+        "score": 5,
+        "reason": "Unique security requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R33",
+        "score": 5,
+        "reason": "Unique availability requirement.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R34",
+        "score": 3,
+        "reason": "General role-based control.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ],
+    "testability": []
+  },
+  "requirements_count": 34,
+  "metrics_evaluated": 5,
+  "metadata": {
+    "prompt_version": 2,
+    "iteration": 4,
+    "num_requirements": 34
+  }
+}

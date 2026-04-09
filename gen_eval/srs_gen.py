@@ -1,23 +1,22 @@
 import os
 import json
-from openai import OpenAI
+import time
+import random
+from groq import Groq
 from dotenv import load_dotenv
 
-# Charger les variables d'environnement depuis le fichier .env
+# Load API Key
 load_dotenv()
 
-token = os.environ.get("GITHUB_TOKEN")
-if token is None:
-    raise ValueError("GITHUB_TOKEN not found in environment variables or .env file")
+api_key = os.environ.get("GROQ_API_KEY")
+if api_key is None:
+    raise ValueError("GROQ_API_KEY not found")
 
-endpoint = "https://models.github.ai/inference"
-model = "openai/gpt-5-mini"
+client = Groq(api_key=api_key)
 
-client = OpenAI(base_url=endpoint, api_key=token)
+model = "openai/gpt-oss-120b"
 
-# --------------------------
-# Description du projet
-# --------------------------
+# Project Description
 project_description = """
 The www.kiestla.edu website aims to simplify the management of student attendance control during classes.
 The site is a portal linking students, teachers, and administrative staff. The site handles the entire process,
@@ -34,72 +33,130 @@ Functionalities:
 - A page alerts teaching staff to students with more than three unjustified absences.
 """
 
-# --------------------------
-# Prompts simple
-# --------------------------
-# system_prompt = {
-#     "role": "system",
-#     "content": """
-# You are a software requirements engineer.
-# Generate a list of functional requirements from the given project description.
-# Number each requirement clearly as Requirement 1, Requirement 2, etc.
-# Keep them concise and clear.
-# """
-# }
+# Prompts
+system_prompt_1 = """You are a software requirements engineer. Generate a list of functional and non-functional requirements from the project description.
+Each requirement should be a single clear statement. Write only the requirement text without numbering or prefixes.
+Keep them concise and clear, do not pass 20 requirement."""
+
+system_prompt_2 = """You are a highly skilled software requirements engineer. Generate a comprehensive list of functional and non-functional requirements from the project description.
+
+Consider:
+- All roles in the system (Administrator, Referring Teacher, Teacher, Student, Administrative Staff)
+- Edge cases, validations, constraints
+- Non-functional requirements (security, performance, usability, reliability)
+
+Write each requirement as a single clear statement. No numbering or prefixes, do not pass 35 requirement.."""
 
 
-# --------------------------
-# Prompts améliorés
-# --------------------------
-system_prompt = {
-    "role": "system",
-    "content": """
-You are a highly skilled software requirements engineer. 
-Generate a **complete and exhaustive list of functional and non-functional requirements** 
-from the project description provided by the user.
+# Groq generation function
+def generate_with_retry(prompt, max_retries=3):
+    for attempt in range(max_retries):
+        try:
+            message = client.chat.completions.create(
+                model=model,
+                max_tokens=4096,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            return message.choices[0].message.content
 
-Rules:
-1. Consider all roles in the system (Administrator, Referring Teacher, Teacher, Student, Administrative Staff) and their interactions.
-2. Include **every possible functionality**, even implicit ones.
-3. Think of **edge cases**, exceptional scenarios, validations, notifications, and system constraints.
-4. Include non-functional requirements such as security, performance, usability, and reliability when applicable.
-5. Number each requirement clearly as "Requirement 1", "Requirement 2", etc.
-6. Write requirements as concise, standalone sentences.
-7. Avoid repeating the same requirement; be precise but exhaustive.
-8. Make sure the requirements cover all possible scenarios for each role.
+        except Exception as e:
+            print(f"Attempt {attempt+1} failed: {e}")
+            sleep_time = 5 + random.uniform(2, 5)
+            print(f"Retrying in {sleep_time:.2f}s...")
+            time.sleep(sleep_time)
 
-The user will provide a project description.
-"""
-}
+    print("Skipping...")
+    return None
 
 
-user_prompt = {
-    "role": "user",
-    "content": project_description
-}
+# Parse requirements text into structured format
+def parse_requirements(text):
+    """Convert generated requirements text into list of dicts with id and text."""
+    if not text:
+        return []
+    
+    requirements = []
+    counter = 1
+    
+    # Split by lines and clean up
+    lines = text.strip().split('\n')
+    
+    for line in lines:
+        line = line.strip()
+        # Skip empty lines and remove common prefixes
+        if not line:
+            continue
+        
+        # Remove numbering patterns like "1.", "1)", "- ", etc.
+        cleaned = line
+        if cleaned[0].isdigit():
+            # Remove leading numbers and punctuation
+            cleaned = line.lstrip('0123456789.-) ')
+        elif cleaned.startswith('-'):
+            cleaned = cleaned[1:].strip()
+        elif cleaned.startswith('•'):
+            cleaned = cleaned[1:].strip()
+        
+        if cleaned:
+            requirements.append({
+                "id": f"R{counter}",
+                "text": cleaned
+            })
+            counter += 1
+    
+    return requirements
 
-# --------------------------
-# Génération 5 fois et stockage
-# --------------------------
+
+# Save JSON
+def save_json(data):
+    with open("srs_history_groq.json", "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=4, ensure_ascii=False)
+
+# Main Loop
 history_generations = []
 
+# Prompt 1
+print("=== Running 5 generations with Prompt 1 ===\n")
+
 for i in range(5):
-    response = client.chat.completions.create(
-        model=model,
-        messages=[system_prompt, user_prompt]
-    )
-    generation_text = response.choices[0].message.content
-    print(f"\n=== Generation {i+1} ===\n{generation_text}\n")
-    
+    full_prompt = system_prompt_1 + "\n\n" + project_description
+
+    result = generate_with_retry(full_prompt)
+    parsed_requirements = parse_requirements(result) if result else []
+
     history_generations.append({
-        "generation_number": i+1,
-        "requirements": generation_text
+        "prompt_version": 1,
+        "generation_number": i + 1,
+        "raw_text": result,
+        "requirements": parsed_requirements,
+        "status": "success" if result else "failed"
     })
 
-# --------------------------
-# Sauvegarde dans JSON
-# --------------------------
-with open("srs_history2.json", "w", encoding="utf-8") as f:
-    json.dump(history_generations, f, indent=4, ensure_ascii=False)
+    print(f"Generation {i+1} done")
+    save_json(history_generations)
+    time.sleep(random.uniform(2, 4))
 
-print("All generations saved to srs_history.json")
+# Prompt 2
+print("\n=== Running 5 generations with Prompt 2 ===\n")
+
+for i in range(5):
+    full_prompt = system_prompt_2 + "\n\n" + project_description
+
+    result = generate_with_retry(full_prompt)
+    parsed_requirements = parse_requirements(result) if result else []
+
+    history_generations.append({
+        "prompt_version": 2,
+        "generation_number": i + 1,
+        "raw_text": result,
+        "requirements": parsed_requirements,
+        "status": "success" if result else "failed"
+    })
+
+    print(f"Generation {i+1} done")
+    save_json(history_generations)
+    time.sleep(random.uniform(2, 4))
+
+print("\nAll generations saved to srs_history_groq.json")

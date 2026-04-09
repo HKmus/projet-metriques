@@ -1,0 +1,748 @@
+{
+  "summary": {
+    "correctness": {
+      "average": 3.89,
+      "min": 2,
+      "max": 5,
+      "distribution": {
+        "1": 0,
+        "2": 6,
+        "3": 1,
+        "4": 1,
+        "5": 11
+      }
+    },
+    "completeness": {
+      "average": 4.63,
+      "min": 3,
+      "max": 5,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 1,
+        "5": 15
+      }
+    },
+    "edge_cases": {
+      "average": 2.0,
+      "min": 2,
+      "max": 2,
+      "distribution": {
+        "1": 0,
+        "2": 19,
+        "3": 0,
+        "4": 0,
+        "5": 0
+      }
+    },
+    "redundancy": {
+      "average": 4.89,
+      "min": 3,
+      "max": 5,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 18
+      }
+    },
+    "testability": {
+      "average": 4.89,
+      "min": 3,
+      "max": 5,
+      "distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 1,
+        "4": 0,
+        "5": 18
+      }
+    }
+  },
+  "metrics": {
+    "correctness": [
+      {
+        "req_id": "R1",
+        "score": 5,
+        "reason": "Matches admin module CRUD in description.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 5,
+        "reason": "Admin can associate teachers per module.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 5,
+        "reason": "Global DB managed by admin.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 5,
+        "reason": "Referring teacher can add teachers.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 5,
+        "reason": "Referring teacher can add students.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 5,
+        "reason": "Teacher records absence with optional comment.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 5,
+        "reason": "Teacher views absences for their modules.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 4,
+        "reason": "Admin enters reason; update implied.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 5,
+        "reason": "Admin sees all absences.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 5,
+        "reason": "Absences grouped by module.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 5,
+        "reason": "Absences grouped by student.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 5,
+        "reason": "Alert page for >3 unjustified absences.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 3,
+        "reason": "RBAC not explicitly stated.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 2,
+        "reason": "Secure auth not mentioned.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 2,
+        "reason": "TLS not mentioned.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 2,
+        "reason": "Performance not specified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 2,
+        "reason": "Browser support not described.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 2,
+        "reason": "Audit logging not mentioned.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 2,
+        "reason": "Backup strategy not described.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ],
+    "completeness": [
+      {
+        "req_id": "R1",
+        "score": 5,
+        "reason": "Actor and outcome clear; no failure conditions.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 5,
+        "reason": "Actor, action, and outcome specified; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 4,
+        "reason": "Missing CRUD details; partially specified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 5,
+        "reason": "Actor, action, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 5,
+        "reason": "Actor, action, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 5,
+        "reason": "Actor, action, optional comment; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 5,
+        "reason": "Actor, view action, outcome clear.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 5,
+        "reason": "Actor, action, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 5,
+        "reason": "Actor, view action, outcome clear.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 3,
+        "reason": "Actor missing; incomplete specification.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 3,
+        "reason": "Actor missing; incomplete specification.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 3,
+        "reason": "Actor missing; incomplete specification.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 5,
+        "reason": "Actor, condition, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 5,
+        "reason": "Actor, condition, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 5,
+        "reason": "Actor, condition, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 5,
+        "reason": "Actor, condition, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 5,
+        "reason": "Actor, condition, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 5,
+        "reason": "Actor, condition, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 5,
+        "reason": "Actor, condition, outcome clear; complete.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ],
+    "edge_cases": [
+      {
+        "req_id": "R1",
+        "score": 2,
+        "reason": "No mention of duplicate names or concurrent edits.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 2,
+        "reason": "Lacks handling of duplicate associations or missing entities.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 2,
+        "reason": "Does not address duplicate entries or invalid data.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 2,
+        "reason": "No edge case for already added teachers or concurrency.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 2,
+        "reason": "Missing checks for duplicate students or missing records.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 2,
+        "reason": "No limits on comment length or duplicate absence handling.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 2,
+        "reason": "Does not cover pagination or large data sets.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 2,
+        "reason": "No validation of justification length or missing absence.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 2,
+        "reason": "Lacks handling of large result sets or filtering.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 2,
+        "reason": "No boundary checks for modules with no absences.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 2,
+        "reason": "Does not address students with no absences or large groups.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 2,
+        "reason": "No handling of threshold boundary or concurrent updates.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 2,
+        "reason": "No mention of privilege escalation or role changes.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 2,
+        "reason": "Does not cover brute force or session hijacking.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 2,
+        "reason": "No mention of certificate expiration or downgrade attacks.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 2,
+        "reason": "No handling of peak load or network latency.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 2,
+        "reason": "No support for older browsers or accessibility.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 2,
+        "reason": "No log size or tampering considerations.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 2,
+        "reason": "No backup failure or concurrent write handling.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ],
+    "redundancy": [
+      {
+        "req_id": "R1",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 3,
+        "reason": "Overlaps with R2 on teacher-module association.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 5,
+        "reason": "No overlap with other requirements.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ],
+    "testability": [
+      {
+        "req_id": "R1",
+        "score": 5,
+        "reason": "Clear actor, action, and verifiable success condition defined.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R2",
+        "score": 5,
+        "reason": "Admin action and outcome are measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R3",
+        "score": 3,
+        "reason": "Defines database existence but lacks specific actions.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R4",
+        "score": 5,
+        "reason": "Teacher action and outcome are measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R5",
+        "score": 5,
+        "reason": "Teacher action and outcome are measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R6",
+        "score": 5,
+        "reason": "Teacher action and outcome are measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R7",
+        "score": 5,
+        "reason": "Teacher view and outcome are measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R8",
+        "score": 5,
+        "reason": "Staff action and outcome are measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R9",
+        "score": 5,
+        "reason": "Staff view and outcome are measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R10",
+        "score": 5,
+        "reason": "Grouping function is measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R11",
+        "score": 5,
+        "reason": "Grouping function is measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R12",
+        "score": 5,
+        "reason": "Alert page content is measurable.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R13",
+        "score": 5,
+        "reason": "Access control can be tested.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R14",
+        "score": 5,
+        "reason": "Authentication can be verified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R15",
+        "score": 5,
+        "reason": "TLS can be verified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R16",
+        "score": 5,
+        "reason": "Response time can be measured.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R17",
+        "score": 5,
+        "reason": "Browser compatibility can be tested.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R18",
+        "score": 5,
+        "reason": "Audit logs can be verified.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      },
+      {
+        "req_id": "R19",
+        "score": 5,
+        "reason": "Backup and restore can be tested.",
+        "human_verdict": "approved",
+        "human_comment": ""
+      }
+    ]
+  },
+  "requirements_count": 19,
+  "metrics_evaluated": 5,
+  "metadata": {
+    "prompt_version": 1,
+    "iteration": 5,
+    "num_requirements": 19
+  }
+}
