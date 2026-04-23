@@ -20,6 +20,9 @@ from .prompts import METRICS
 # ─────────────────────────────────────────────
 
 def dispatch_to_agents(state: AgentState) -> list[Send]:
+    selected = state.get("selected_metrics", METRICS)
+    include_reason = state.get("include_reason", False)
+    
     return [
         Send(
             "metric_agent",           # target node name
@@ -27,9 +30,10 @@ def dispatch_to_agents(state: AgentState) -> list[Send]:
                 system_description=state["system_description"],
                 requirements=state["requirements"],
                 metric=metric,
+                include_reason=include_reason,
             ),
         )
-        for metric in METRICS
+        for metric in selected
     ]
 
 

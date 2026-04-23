@@ -8,7 +8,7 @@ class Requirement(TypedDict):
     text: str
 
 
-class MetricScore(TypedDict):
+class MetricScore(TypedDict, total=False):
     req_id: str
     score: int          # 1–5
     reason: str
@@ -27,10 +27,12 @@ class HumanVerification(TypedDict):
 
 
 # operator.add lets multiple parallel agents append to the same list
-class AgentState(TypedDict):
+class AgentState(TypedDict, total=False):
     system_description: str
     requirements: list[Requirement]
-
+    selected_metrics: list[str]  # which metrics to run
+    include_reason: bool         # flag to include reasoning
+    
     # parallel agents write here — operator.add merges lists safely
     metric_results: Annotated[list[MetricResult], operator.add]
 
@@ -42,7 +44,8 @@ class AgentState(TypedDict):
 
 
 # Sub-state each parallel worker receives via Send()
-class WorkerInput(TypedDict):
+class WorkerInput(TypedDict, total=False):
     system_description: str
     requirements: list[Requirement]
     metric: str         # which metric this worker handles
+    include_reason: bool

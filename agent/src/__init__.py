@@ -24,7 +24,7 @@ from .agents import (
     report_node,
 )
 from .graph import graph
-from .prompts import METRICS, METRIC_PROMPTS
+from .prompts import METRICS, get_metric_prompt
 
 __all__ = [
     # State types
@@ -44,5 +44,5 @@ __all__ = [
     "graph",
     # Prompts
     "METRICS",
-    "METRIC_PROMPTS",
+    "get_metric_prompt",
 ]

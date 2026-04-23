@@ -5,10 +5,10 @@ import time
 from langchain_groq import ChatGroq
 from langchain_core.messages import SystemMessage, HumanMessage
 from .state import AgentState, WorkerInput, MetricResult, HumanVerification
-from .prompts import METRIC_PROMPTS, METRICS
+from .prompts import get_metric_prompt, METRICS
 
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
-GROQ_MODEL   = os.environ.get("GROQ_MODEL", "openai/gpt-oss-20b")
+GROQ_MODEL   = os.environ.get("GROQ_MODEL", "openai/gpt-oss-120b")
 
 
 def _get_llm() -> ChatGroq:
@@ -105,9 +105,10 @@ def _parse_json_response(raw: str, metric: str = None) -> dict:
 # ─────────────────────────────────────────────
 
 def coordinator_node(state: AgentState) -> dict:
+    selected_metrics = state.get("selected_metrics", METRICS)
     print(f"\n[Coordinator] Model : {GROQ_MODEL} (Groq)")
     print(f"[Coordinator] Received {len(state['requirements'])} requirements.")
-    print(f"[Coordinator] Dispatching {len(METRICS)} metric agents in parallel...\n")
+    print(f"[Coordinator] Dispatching {len(selected_metrics)} metric agents in parallel...\n")
 
     if not state["system_description"]:
         raise ValueError("system_description is required.")
@@ -124,7 +125,8 @@ def coordinator_node(state: AgentState) -> dict:
 
 def metric_agent_node(worker_input: WorkerInput) -> dict:
     metric     = worker_input["metric"]
-    system_prompt = METRIC_PROMPTS[metric]
+    include_reason = worker_input.get("include_reason", False)
+    system_prompt = get_metric_prompt(metric, include_reason)
     req_text   = _format_requirements(worker_input["requirements"])
 
     user_content = (
