@@ -4,7 +4,12 @@
 
 The **Requirements Evaluation Agent** is an automated, Multi-Agent System (MAS) designed to evaluate Software Requirements Specifications (SRS). Built on top of **LangGraph** and Large Language Models (LLMs), the system provides quantifiable quality assessments of requirements against a canonical system description.
 
-The pipeline is purposefully designed for empirical research, dataset validation, and iterative prompt engineering tests. It offers reliable, structural evaluation across multiple generations of requirements, allowing researchers to track requirement evolution and degradation.
+The pipeline is purposefully designed for empirical research, metric evaluation, and consistency testing. It offers two distinct modes:
+
+1. **Single SRS Mode** (Default): Evaluates a single SRS example from `srs.json` across all 4 metrics, running **10 independent iterations** to measure metric consistency and reliability.
+2. **Batch Mode**: Evaluates multiple SRS versions from `srs_history_groq.json`, tracking requirement evolution across different prompts and generations.
+
+Both modes produce highly structured JSON reports organized by iteration, enabling detailed statistical analysis and visualization of metric performance.
 
 ---
 
@@ -42,34 +47,115 @@ The evaluation workflow progresses through several defined nodes in the state gr
 
 ## **Evaluation Capabilities & Modes**
 
-### **Batch Evaluation Engine**
+### **Evaluation Modes**
 
-The architecture natively supports the evaluation of programmatic iterations (e.g., historical tracking of different LLM prompts from `srs_history_groq.json`).
+#### **Single SRS Mode (Default)**
+When loading `srs.json` (a flat array of requirements without batch metadata):
+- Automatically detects single SRS format
+- Runs **10 sequential iterations** on the same requirements
+- Each iteration independently evaluates all 4 metrics (Completeness, Correctness, Redundancy, Testability)
+- Ideal for measuring metric consistency, variability, and reliability on a single example
+- Each iteration's results are saved to separate `iter1/` through `iter10/` folders
 
-- It parses data grouped by `prompt_version` and `generation_number`.
-- Automatically generates isolated reports for each iteration and version.
-- Compiles aggregate summaries detailing the progression/regression of SRS quality over different models or prompts.
+#### **Batch Evaluation Mode**
+When loading `srs_history_groq.json` (with `prompt_version` and `generation_number` metadata):
+- Parses data grouped by `prompt_version` and `generation_number`
+- Generates isolated reports for each iteration and version
+- Tracks progression/regression of SRS quality across different LLM prompts or generations
 
 ### **Component-Level Metric Selection**
 
 A highly modular CLI allows researchers to isolate evaluations:
 
-- Run all metrics simultaneously (`--all`).
-- Run specific metrics individually to save compute and target specific hypotheses (`--correctness`, `--redundancy`, etc.).
-- Enable detailed explanations for scoring logic (`--reason`).
+- Run all metrics simultaneously (`--all`, default for single SRS mode)
+- Run specific metrics individually to save compute and target specific hypotheses (`--correctness`, `--redundancy`, `--completeness`, `--testability`)
+- Enable detailed explanations for scoring logic (`--reason`)
+- Specify custom input files with `--sys <file>` and `--json <file>`
+- Enable human-in-the-loop review with `--hitl`
 
 ### **Output Structure**
 
-Analysis is neatly organized into a queryable `reports/` directory structure:
+#### **Single SRS Mode Output**
+Reports are organized by iteration, with each metric saved as a separate file with metric suffix:
 
 ```text
 reports/
-  ├── completeness/
-  │   ├── report_v1_iter1.json
-  │   └── summary.json
-  ├── correctness/
-  ├── redundancy/
-  └── testability/
+  ├── iter1/
+  │   ├── report_iter1_completeness.json
+  │   ├── report_iter1_correctness.json
+  │   ├── report_iter1_redundancy.json
+  │   └── report_iter1_testability.json
+  ├── iter2/
+  │   ├── report_iter2_completeness.json
+  │   ├── report_iter2_correctness.json
+  │   ├── report_iter2_redundancy.json
+  │   └── report_iter2_testability.json
+  └── iter3-iter10/
+      └── [Same structure for iterations 3-10]
 ```
 
-These highly structured JSON outputs are natively formatted for direct ingestion into analysis tools like Pandas, Jupyter Notebooks, or downstream visualization scripts.
+#### **Batch Mode Output**
+Reports maintain the same iteration-based structure with version information in filenames:
+
+```text
+reports/
+  ├── iter1/
+  │   ├── report_v1_iter1_completeness.json
+  │   ├── report_v1_iter1_correctness.json
+  │   └── ...
+  ├── iter2/
+  └── ...
+```
+
+Each report is a highly structured JSON file with evaluations, scores, and statistical summaries, ready for direct ingestion into analysis tools like Pandas, Jupyter Notebooks, or visualization scripts.
+
+---
+
+## **Visualization & Analysis**
+
+### **Visualization Script: `visualize_reports.py`**
+
+A comprehensive visualization tool generates multiple chart types from the evaluation reports. All figures are saved to the `figs/` directory at 300 DPI for publication-quality output.
+
+#### **Chart Types Generated:**
+
+1. **Grouped Bar Chart** (`grouped_bar_chart.png`)
+   - X-axis: Metrics (Completeness, Correctness, Redundancy, Testability)
+   - Y-axis: Scores (1-5 scale)
+   - Shows all 10 iteration scores per metric with distinct colors
+   - Ideal for comparing performance across iterations
+
+2. **Trend Line Chart** (`trend_line_chart.png`)
+   - X-axis: Iteration (1-10)
+   - Y-axis: Scores (1-5 scale)
+   - One line per metric showing score progression
+   - Reveals consistency patterns and potential drift over iterations
+
+3. **Average Bar Chart** (`average_bar_chart.png`)
+   - X-axis: Metrics
+   - Y-axis: Average score across all 10 iterations
+   - Quick overview of overall metric performance
+   - Includes value labels on bars
+
+4. **Box Plot with Whiskers** (`box_plot_whiskers.png`)
+   - X-axis: Metrics
+   - Y-axis: Score range (zoomed 2-5 for clarity)
+   - Shows data distribution with:
+     - **Red line**: Median score
+     - **Blue dashed line**: Mean score
+     - **Light blue box**: Interquartile range (25%-75%)
+     - **Whiskers**: Min/Max values
+   - Reveals score variability and outliers
+
+#### **Usage:**
+
+```bash
+python visualize_reports.py
+```
+
+The script automatically:
+- Loads all 10 iterations from `reports/iter1/` through `reports/iter10/`
+- Extracts and averages scores per metric per iteration
+- Generates all 4 chart types
+- Prints a summary table to console
+- Saves high-resolution PNGs to `figs/`

@@ -89,8 +89,8 @@ Examples:
     parser.add_argument(
         "--json",
         type=str,
-        default="srs_history_groq.json",
-        help="Path to requirements JSON file (default: srs_history_groq.json)"
+        default="srs.json",
+        help="Path to requirements JSON file (default: srs.json)"
     )
     
     # Evaluation mode
@@ -238,34 +238,28 @@ def print_summary(final_report: dict) -> None:
     console.print(table)
 
 
-def save_reports(final_report: dict) -> None:
-    """Save overall report and individual metric reports."""
+def save_reports(final_report: dict, iteration: int = 1) -> None:
+    """Save individual metric reports with iteration-based structure (no summary.json)."""
     import os
     from pathlib import Path
     
-    # Save overall report
-    report_path = "evaluation_report.json"
-    with open(report_path, "w") as f:
-        json.dump(final_report, f, indent=2)
-    console.print(f"[green]✓[/green] Full report saved to {report_path}")
-    
-    # Create reports directory if it doesn't exist
+    # Create reports directory structure with iteration folder
     reports_dir = Path("reports")
     reports_dir.mkdir(exist_ok=True)
     
-    # Save individual metric reports
+    iteration_dir = reports_dir / f"iter{iteration}"
+    iteration_dir.mkdir(exist_ok=True)
+    
+    # Save individual metric reports with metric suffix
     metrics = final_report.get("metrics", {})
     for metric, evaluations in metrics.items():
-        metric_dir = reports_dir / metric
-        metric_dir.mkdir(exist_ok=True)
-        
         metric_report = {
             "metric": metric,
             "evaluations": evaluations,
             "requirements_count": final_report.get("requirements_count", 0),
             "summary": final_report.get("summary", {}).get(metric, {}),
         }
-        metric_file = metric_dir / "report_single.json"
+        metric_file = iteration_dir / f"report_iter{iteration}_{metric}.json"
         with open(metric_file, "w") as f:
             json.dump(metric_report, f, indent=2)
         console.print(f"[green]✓[/green] {metric.title()} report saved to {metric_file}")
@@ -467,10 +461,10 @@ def main():
         report_dir.mkdir(exist_ok=True)
 
         for prompt_version, iteration, final_report in reports:
+            iteration_dir = report_dir / f"iter{iteration}"
+            iteration_dir.mkdir(exist_ok=True)
+            
             for metric, evaluations in final_report.get("metrics", {}).items():
-                metric_dir = report_dir / metric
-                metric_dir.mkdir(exist_ok=True)
-                
                 metric_report = {
                     "metric": metric,
                     "evaluations": evaluations,
@@ -478,33 +472,10 @@ def main():
                     "summary": final_report.get("summary", {}).get(metric, {}),
                     "metadata": final_report.get("metadata", {}),
                 }
-                report_path = metric_dir / f"report_v{prompt_version}_iter{iteration}.json"
+                report_path = iteration_dir / f"report_v{prompt_version}_iter{iteration}_{metric}.json"
                 with open(report_path, "w") as f:
                     json.dump(metric_report, f, indent=2)
                 console.print(f"[green]✓[/green] {report_path}")
-
-        for metric in selected_metrics:
-            metric_dir = report_dir / metric
-            metric_dir.mkdir(exist_ok=True)
-            
-            summary_data = {
-                "system_description": system_desc,
-                "metric": metric,
-                "evaluations": [
-                    {
-                        "prompt_version": v,
-                        "iteration": i,
-                        "num_requirements": final_report.get("requirements_count", 0),
-                        "summary": final_report.get("summary", {}).get(metric, {}),
-                        "report_file": f"report_v{v}_iter{i}.json",
-                    }
-                    for v, i, final_report in reports
-                ],
-            }
-            summary_path = metric_dir / "summary.json"
-            with open(summary_path, "w") as f:
-                json.dump(summary_data, f, indent=2)
-            console.print(f"[green]✓[/green] {summary_path}")
         
         console.print()
 
@@ -519,20 +490,27 @@ def main():
         console.print(f"[green]✓[/green] Running metrics: {', '.join(selected_metrics)}")
         console.print(f"[green]✓[/green] Dispatching metric agents in parallel...\n")
 
-        final_report = evaluate_requirements(
-            system_desc,
-            requirements,
-            selected_metrics,
-            hitl_mode,
-            include_reason=args.reason,
-        )
+        # Run 10 iterations on the single SRS example
+        console.print(f"\n[bold cyan]Running 10 iterations on single SRS example[/bold cyan]\n")
+        
+        with Progress() as progress:
+            task = progress.add_task("[cyan]Evaluating...", total=10)
 
-        console.print("\n[bold]═══ Final Report ═══[/bold]\n")
-        print_summary(final_report)
+            for iteration in range(1, 11):
+                final_report = evaluate_requirements(
+                    system_desc,
+                    requirements,
+                    selected_metrics,
+                    hitl_mode,
+                    batch_label=f"Iteration {iteration}/10",
+                    include_reason=args.reason,
+                )
 
-        # Save all reports
-        console.print()
-        save_reports(final_report)
+                # Save reports for this iteration
+                save_reports(final_report, iteration=iteration)
+                progress.advance(task)
+
+        console.print("\n[bold]═══ All 10 iterations completed ═══[/bold]\n")
 
 
 if __name__ == "__main__":

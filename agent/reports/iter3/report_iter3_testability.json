@@ -1,0 +1,138 @@
+{
+  "metric": "testability",
+  "evaluations": [
+    {
+      "req_id": "R1",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R2",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R3",
+      "score": 4,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R4",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R5",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R6",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R7",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R8",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R9",
+      "score": 4,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R10",
+      "score": 4,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R11",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R12",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R13",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R14",
+      "score": 4,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R15",
+      "score": 4,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R16",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R17",
+      "score": 4,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R18",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R19",
+      "score": 5,
+      "human_verdict": "approved",
+      "human_comment": ""
+    },
+    {
+      "req_id": "R20",
+      "score": 4,
+      "human_verdict": "approved",
+      "human_comment": ""
+    }
+  ],
+  "requirements_count": 20,
+  "summary": {
+    "average": 4.65,
+    "min": 4,
+    "max": 5,
+    "distribution": {
+      "1": 0,
+      "2": 0,
+      "3": 0,
+      "4": 7,
+      "5": 13
+    }
+  }
+}

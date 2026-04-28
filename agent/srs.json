@@ -1,0 +1,82 @@
+[
+  {
+    "id": "R1",
+    "text": "The system shall allow administrators to create, edit, and delete teaching modules."
+  },
+  {
+    "id": "R2",
+    "text": "The system shall enable administrators to associate one or more teachers with each teaching module."
+  },
+  {
+    "id": "R3",
+    "text": "The system shall maintain a global database of teachers and students that is managed by administrators."
+  },
+  {
+    "id": "R4",
+    "text": "The system shall permit referring teachers to add existing teachers and students to a module."
+  },
+  {
+    "id": "R5",
+    "text": "The system shall allow teachers to record a student absence for a specific module and include an optional comment."
+  },
+  {
+    "id": "R6",
+    "text": "The system shall provide teachers with a view of all absences for students enrolled in any of their modules."
+  },
+  {
+    "id": "R7",
+    "text": "The system shall enable administrative staff to enter or update the justification reason for any recorded absence."
+  },
+  {
+    "id": "R8",
+    "text": "The system shall give administrative staff access to a complete list of all student absences across modules."
+  },
+  {
+    "id": "R9",
+    "text": "The system shall support grouping of absence records by teaching module."
+  },
+  {
+    "id": "R10",
+    "text": "The system shall support grouping of absence records by student."
+  },
+  {
+    "id": "R11",
+    "text": "The system shall display an alert page listing students who have accumulated more than three unjustified absences."
+  },
+  {
+    "id": "R12",
+    "text": "The system shall enforce role‑based access control to ensure users can only perform actions permitted for their role."
+  },
+  {
+    "id": "R13",
+    "text": "The system shall validate all input data for completeness and correct format before saving."
+  },
+  {
+    "id": "R14",
+    "text": "The system shall encrypt sensitive personal data both at rest and in transit."
+  },
+  {
+    "id": "R15",
+    "text": "The system shall respond to user actions within two seconds under normal load."
+  },
+  {
+    "id": "R16",
+    "text": "The system shall be available 99.5 % of each calendar month, excluding scheduled maintenance."
+  },
+  {
+    "id": "R17",
+    "text": "The system shall provide a responsive web interface compatible with modern browsers on desktop and mobile devices."
+  },
+  {
+    "id": "R18",
+    "text": "The system shall generate audit logs for all create, read, update, and delete operations on attendance data."
+  },
+  {
+    "id": "R19",
+    "text": "The system shall back up the attendance database nightly and retain backups for at least thirty days."
+  },
+  {
+    "id": "R20",
+    "text": "The system shall support concurrent usage by up to 500 simultaneous users without performance degradation."
+  }
+]
